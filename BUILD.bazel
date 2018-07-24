@@ -1,0 +1,11 @@
+
+load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+
+go_binary(
+    name = "crane",
+    embed = ["@com_github_google_go_containerregistry//cmd/crane:go_default_library"],
+    goos = "linux",
+    goarch = "amd64",
+    static = "on",
+    pure = "on",
+)
